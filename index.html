@@ -211,7 +211,7 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
         </div>
       </section>
 
-	    <div class="stats-container">
+<div class="stats-container">
   <!-- Total Staff -->
   <div class="stat-circle" style="background-color: #4CAF50;">
     <i class="bx bx-user"></i>
@@ -273,16 +273,19 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
 <style>
   .stats-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     gap: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
     padding: 20px;
   }
 
   .stat-circle {
-    width: 150px;
-    height: 150px;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -297,18 +300,18 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
   }
 
   .stat-circle i {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 10px;
   }
 
   .stat-circle h3 {
-    font-size: 32px;
+    font-size: 28px;
     margin: 0;
     font-weight: bold;
   }
 
   .stat-circle p {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 5px;
     font-weight: normal;
   }
@@ -325,36 +328,12 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
     }
 
     .stat-circle {
-      width: 120px;
-      height: 120px;
+      min-width: 100px;
+      min-height: 100px;
     }
 
     .stat-circle i {
-      font-size: 40px;
-    }
-
-    .stat-circle h3 {
-      font-size: 28px;
-    }
-
-    .stat-circle p {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .stats-container {
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .stat-circle {
-      width: 100px;
-      height: 100px;
-    }
-
-    .stat-circle i {
-      font-size: 36px;
+      font-size: 32px;
     }
 
     .stat-circle h3 {
@@ -363,6 +342,29 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
 
     .stat-circle p {
       font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-container {
+      gap: 10px;
+    }
+
+    .stat-circle {
+      min-width: 80px;
+      min-height: 80px;
+    }
+
+    .stat-circle i {
+      font-size: 24px;
+    }
+
+    .stat-circle h3 {
+      font-size: 20px;
+    }
+
+    .stat-circle p {
+      font-size: 8px;
     }
   }
 </style>
