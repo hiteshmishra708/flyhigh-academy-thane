@@ -210,6 +210,163 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
         </div>
       </section>
 
+	    <div class="stats-container">
+  <!-- Total Staff -->
+  <div class="stat-circle" style="background-color: #4CAF50;">
+    <i class="bx bx-user"></i>
+    <h3 id="staffCount">0</h3>
+    <p>Total Staffs</p>
+  </div>
+
+  <!-- Winning Awards -->
+  <div class="stat-circle" style="background-color: #FF5722;">
+    <i class="bx bx-award"></i>
+    <h3 id="awardCount">0</h3>
+    <p>Winning Awards</p>
+  </div>
+
+  <!-- Happy Students -->
+  <div class="stat-circle" style="background-color: #2196F3;">
+    <i class="bx bx-smile"></i>
+    <h3 id="studentCount">0</h3>
+    <p>Happy Students</p>
+  </div>
+
+  <!-- Total Courses -->
+  <div class="stat-circle" style="background-color: #FFC107;">
+    <i class="bx bx-book"></i>
+    <h3 id="courseCount">0</h3>
+    <p>Total Courses</p>
+  </div>
+</div>
+
+<!-- JavaScript to animate the counters -->
+<script>
+  // Function to animate the counters
+  function animateCounter(id, endValue, duration) {
+    let startValue = 0;
+    let increment = endValue / (duration / 50);
+    let element = document.getElementById(id);
+
+    let interval = setInterval(function () {
+      startValue += increment;
+      element.textContent = Math.floor(startValue);
+
+      if (startValue >= endValue) {
+        clearInterval(interval);
+        element.textContent = endValue; // Set to exact value after the animation ends
+      }
+    }, 50);
+  }
+
+  // Wait for the DOM to fully load before starting animations
+  window.addEventListener("DOMContentLoaded", function () {
+    animateCounter("staffCount", 80, 3000);
+    animateCounter("awardCount", 195, 3000);
+    animateCounter("studentCount", 500, 3000);
+    animateCounter("courseCount", 50, 3000);
+  });
+</script>
+
+<!-- CSS for circular stat badges -->
+<style>
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .stat-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .stat-circle i {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .stat-circle h3 {
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .stat-circle p {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: normal;
+  }
+
+  .stat-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .stats-container {
+      gap: 15px;
+    }
+
+    .stat-circle {
+      width: 120px;
+      height: 120px;
+    }
+
+    .stat-circle i {
+      font-size: 40px;
+    }
+
+    .stat-circle h3 {
+      font-size: 28px;
+    }
+
+    .stat-circle p {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-circle {
+      width: 100px;
+      height: 100px;
+    }
+
+    .stat-circle i {
+      font-size: 36px;
+    }
+
+    .stat-circle h3 {
+      font-size: 24px;
+    }
+
+    .stat-circle p {
+      font-size: 10px;
+    }
+  }
+</style>
+
+
       <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
