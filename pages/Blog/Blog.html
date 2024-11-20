@@ -278,16 +278,20 @@
         cursor: pointer;
     }
 
-    button[type="submit"] {
-        width: 100%;
-        background-color: #28a745;
-        color: white;
-        padding: 12px;
-        font-size: 18px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+   button[type="submit"] {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Center-align text inside button */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+}
 
     button[type="submit"]:hover {
         background-color: #218838;
@@ -495,32 +499,34 @@
 		      loading="lazy"
               />
             </div>
-            <div class="f2">
-              <h3>
-		  <a
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+           
+		   <a 
                   target="_blank"
                   href="mailto:flyhighthane@gmail.com"
-            	style=font-family: 'Times New Roman', serif;
-                  ><i class="bx bx-envelope">flyhighthane@gmail.com</i
-                ></a><br><br>
-	<a
+            	
+                  ><i class="bx bx-envelope"></i>flyhighthane@gmail.com</a><br><br>
+	<a 
                   target="_blank"
                   href="tel:+919702529659"
-                  style=font-family: 'Times New Roman', serif;
-                  ><i class="bx bx-phone">+919702529659</i
-                ></a><br><br>
-		<a
+             
+                  ><i class="bx bx-phone"></i>+919702529659</a><br><br>
+		
+		    <a style="text-align: center;"
                   target="_blank"
-                  href="https://maps.app.goo.gl/tVCMmsiSnGLWtWp4A"
-			style=font-family: 'Times New Roman', serif;
-                  ><i class="bx bx-map">Ram Niwas, 401, B wing Station Rd, near Shri Gaondevi Mandir, Dada Patil Wadi, Shivaji Nagar, Thane West, Thane, Maharashtra</i
-                ></a><br><br>
-                Designed and developed by ReferIndia
-
-              </h3>
+                  href="https://maps.app.goo.gl/tVCMmsiSnGLWtWp4A">Address: Ram Niwas, 401, B wing Station Rd, <br>near Shri Gaondevi Mandir, Dada Patil Wadi, Shivaji Nagar, <br> Thane West, Thane, Maharashtra
+                </a><br><br>
+               
+            
             </div>
+		
           </div>
+		
         </div>
+	     <i style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 14px; color: #000; z-index: 9999; text-align: center; display: block;">
+  Designed and developed by ReferIndia
+</i>
+	      
       </footer>
     </div>
     <script src="../../scrollup.js"></script>
