@@ -1,4 +1,4 @@
-name: Deploy Fly High
+name: Deploy FlyHigh
 on:
   push:
     branches: [main]
