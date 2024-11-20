@@ -328,101 +328,103 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
 <!-- CSS for circular stat badges -->
 <style>
   .stats-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    gap: 20px;
-    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
-    padding: 20px;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  padding: 20px;
+  flex-direction: row; /* Default horizontal layout */
+}
 
-  .stat-circle {
-    min-width: 160px;
-    min-height: 160px;
-    max-width: 210px;
-    max-height: 210px;
-    border-radius: 70%;
-    display: flex;
-    flex-direction: column;
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
     align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
+    gap: 20px;
+  }
+}
+
+.stat-circle {
+  min-width: 160px;
+  min-height: 160px;
+  max-width: 210px;
+  max-height: 210px;
+  border-radius: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stat-circle i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.stat-circle h3 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.stat-circle p {
+  font-size: 25px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.stat-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for circle size and font */
+@media (max-width: 768px) {
+  .stat-circle {
+    min-width: 120px;
+    min-height: 120px;
   }
 
   .stat-circle i {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 32px;
   }
 
   .stat-circle h3 {
-    font-size: 28px;
-    margin: 0;
-    font-weight: bold;
+    font-size: 24px;
   }
 
   .stat-circle p {
-    font-size: 25px;
-    margin-top: 5px;
-    font-weight: normal;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-circle {
+    min-width: 120px;
+    min-height: 120px;
   }
 
-  .stat-circle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  .stat-circle i {
+    font-size: 24px;
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .stats-container {
-      gap: 12px;
-    }
-
-    .stat-circle {
-      min-width: 120px;
-      min-height: 120px;
-    }
-
-    .stat-circle i {
-      font-size: 32px;
-    }
-
-    .stat-circle h3 {
-      font-size: 24px;
-    }
-
-    .stat-circle p {
-      font-size: 18px;
-    }
+  .stat-circle h3 {
+    font-size: 20px;
   }
 
-  @media (max-width: 480px) {
-    .stats-container {
-      gap: 10px;
-    }
-
-    .stat-circle {
-      min-width: 120px;
-      min-height: 120px;
-    }
-
-    .stat-circle i {
-      font-size: 24px;
-    }
-
-    .stat-circle h3 {
-      font-size: 20px;
-    }
-
-    .stat-circle p {
-      font-size: 18px;
-    }
+  .stat-circle p {
+    font-size: 18px;
   }
+}
+
 </style>
 
 
@@ -479,26 +481,24 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
                 src="./data/p3.jpg"
               />
             </div>
-            <div class="f2" >
+            <div  >
               <h3>
 		   <a
                   target="_blank"
                   href="mailto:flyhighthane@gmail.com"
-            	style="font-family: 'Calibri', sans-serif;"
-                  ><i class="bx bx-envelope">flyhighthane@gmail.com</i
-                ></a><br><br>
+            	
+                  ><i class="bx bx-envelope"></i>flyhighthane@gmail.com</a><br><br>
 	<a
                   target="_blank"
                   href="tel:+919702529659"
-                style="font-family: 'Calibri', sans-serif;"
-                  ><i class="bx bx-phone">+919702529659</i
-                ></a><br><br>
+             
+                  ><i class="bx bx-phone"></i>+919702529659</a><br><br>
 		<a
                   target="_blank"
                   href="https://maps.app.goo.gl/tVCMmsiSnGLWtWp4A"
 			
-                  ><i class="bx bx-map" style="font-family: 'Calibri', sans-serif;">Ram Niwas, 401, B wing Station Rd, near Shri Gaondevi Mandir, Dada Patil Wadi, Shivaji Nagar, Thane West, Thane, Maharashtra</i
-                ></a><br><br>
+                  ><i class="bx bx-map" ></i>Ram Niwas, 401, B wing Station Rd, near Shri Gaondevi Mandir, Dada Patil Wadi, Shivaji Nagar, Thane West, Thane, Maharashtra
+                </a><br><br>
                 Designed and developed by ReferIndia
               </h3>
             </div>
