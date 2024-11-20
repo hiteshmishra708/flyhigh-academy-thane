@@ -1,0 +1,20 @@
+name: Deploy Fly High
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Fly High
+        uses: appleboy/ssh-action@v0.1.2
+        with:
+          host: ${{secrets.SSH_HOST}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
+     
+          script: |
+            cd /home/hitesh/flyhigh-academy-thane
+            git pull
+            echo 'Deployment successful to digital ocean'
