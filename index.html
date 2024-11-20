@@ -392,10 +392,10 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email">
             </div>
-            <!-- <div>
+            <div>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="2">
-            </div> -->
+            </div> 
             <input type="text" class="hidden-input" id="shop_id" name="shop_id" value="2">
             <input type="text" class="hidden-input" id="product_id" name="product_id" value="">
             <div class="row-50-submit">
@@ -550,7 +550,7 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
             const formData = new FormData(this);
 
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', '/api/user-enquiry/', true);
+            xhr.open('POST', 'https://helpinghands.referindia.co.in/core/api/flyhighthane/', true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             
             xhr.setRequestHeader('X-CSRFToken', 'zDXatmrr5kSa5OP1rPje3Pg63Hx0IWA2rXE9RkDFcTDiID7KjJJIm5eT4zMHmW5S');
