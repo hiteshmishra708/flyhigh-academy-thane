@@ -435,17 +435,21 @@ Fly High Aviation Academy Thane is dedicated to providing a professional trainin
         cursor: pointer;
     }
 
-    button[type="submit"] {
-        width: 100%;
-        background-color: #28a745;
-        color: white;
-        padding: 12px;
-        font-size: 18px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center; /* Center-align text inside button */
-    }
+
+	button[type="submit"] {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Center-align text inside button */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+}
 
     button[type="submit"]:hover {
         background-color: #218838;
